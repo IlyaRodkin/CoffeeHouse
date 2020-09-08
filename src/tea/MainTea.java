@@ -1,41 +1,42 @@
 package tea;
 
-public class MainTea {
+import coffee.American;
+import coffee.Espresso;
+import coffee.Latte;
+import coffee.Raff;
+
+public abstract class MainTea {
 
     private Double price;
     private Integer sugar;
     private Integer syrup;
     private Boolean ice;
 
-    public Double getPrice() {
+    public MainTea(Double price, Integer sugar, Integer syrup, Boolean ice) {
+        this.price = price;
+        this.sugar = sugar;
+        this.syrup = syrup;
+        this.ice = ice;
+    }
+
+    public  Double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Integer getSugar() {
+    public  Integer getSugar() {
         return sugar;
     }
 
-    public void setSugar(Integer sugar) {
-        this.sugar = sugar;
-    }
-
-    public Integer getSyrup() {
+    public  Integer getSyrup() {
         return syrup;
     }
 
-    public void setSyrup(Integer syrup) {
-        this.syrup = syrup;
-    }
-
-    public Boolean getIce() {
+    public  Boolean getIce() {
         return ice;
     }
 
-    public void setIce(Boolean ice) {
-        this.ice = ice;
+    public static void getSetOfTea() {
+        System.out.println("Today we have\n1. " + BlackTea.getNAME() + "\n2. " + FruitTea.getNAME()
+                + "\n3. " + GreenTea.getNAME() + "\n4. " + MintTea.getNAME());
     }
 }

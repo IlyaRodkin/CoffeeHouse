@@ -39,13 +39,21 @@ public class main {
         switch (num){
             case 1:
                 MainCoffee.getSetOfCoffee();
-                consoleIn();
+                num = 0;
+                while (num == 0) num = consoleIn();
+                switch (num){
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                }
                 break;
             case 2:
                 break;
             case 3:
                 break;
             case 4:
+                new Receipt().toString();
                 break;
         }
     }
