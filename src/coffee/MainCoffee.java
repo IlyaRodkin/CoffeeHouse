@@ -2,10 +2,10 @@ package coffee;
 
 public abstract class MainCoffee {
 
-    private Double price;
-    private Integer sugar;
-    private Integer syrup;
-    private Integer grainType;
+    private  Double price;
+    private  Integer sugar;
+    private  Integer syrup;
+    private  Integer grainType;
 
     public MainCoffee(Double price, Integer sugar, Integer syrup, Integer grainType) {
         this.price = price;
@@ -14,24 +14,25 @@ public abstract class MainCoffee {
         this.grainType = grainType;
     }
 
-    public MainCoffee() {
-
-    }
-
-    public Double getPrice() {
+    public  Double getPrice() {
         return price;
     }
 
-    public Integer getSugar() {
+    public  Integer getSugar() {
         return sugar;
     }
 
-    public Integer getSyrup() {
+    public  Integer getSyrup() {
         return syrup;
     }
 
-    public Integer getGrainType() {
+    public  Integer getGrainType() {
         return grainType;
+    }
+
+    public static void getSetOfCoffee() {
+    System.out.println("Today we have\n1. " + Espresso.getNAME() + "\n2. " + American.getNAME()
+                        + "\n3. " + Latte.getNAME() + "\n4. " + Raff.getNAME());
     }
 
 }
