@@ -1,5 +1,7 @@
 package coffee;
 
+import com.sun.tools.javac.Main;
+
 public abstract class MainCoffee {
 
     private  Double price;
@@ -31,8 +33,20 @@ public abstract class MainCoffee {
     }
 
     public static void getSetOfCoffee() {
-    System.out.println("Today we have\n1. " + Espresso.getNAME() + "\n2. " + American.getNAME()
+    System.out.println("Today we have, so what do you want?\n1. " + Espresso.getNAME() + "\n2. " + American.getNAME()
                         + "\n3. " + Latte.getNAME() + "\n4. " + Raff.getNAME());
+    }
+    
+    public static void chooseCoffee(){
+        int num = 0;
+        num =  main.consoleIn();
+        while (num == 0) ;
+        switch (num){
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+        }
     }
 
 }

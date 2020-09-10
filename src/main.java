@@ -1,4 +1,6 @@
+import cake.MainCake;
 import coffee.MainCoffee;
+import tea.MainTea;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -14,6 +16,7 @@ public class main {
 
         System.out.println(YOU_ARE_WELCOME + WHAT_DO_YOU_WANT);
         int num = 0;
+        main.consoleIn();
         Receipt receipt = new Receipt();
         menuCafe(num);
     }
@@ -39,18 +42,13 @@ public class main {
         switch (num){
             case 1:
                 MainCoffee.getSetOfCoffee();
-                num = 0;
-                while (num == 0) num = consoleIn();
-                switch (num){
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                }
+
                 break;
             case 2:
+                MainTea.getSetOfTea();
                 break;
             case 3:
+                MainCake.getSetOfCake();
                 break;
             case 4:
                 new Receipt().toString();

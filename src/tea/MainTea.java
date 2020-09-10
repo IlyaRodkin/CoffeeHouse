@@ -36,7 +36,7 @@ public abstract class MainTea {
     }
 
     public static void getSetOfTea() {
-        System.out.println("Today we have\n1. " + BlackTea.getNAME() + "\n2. " + FruitTea.getNAME()
+        System.out.println("Today we have, so what do you want?\n1. " + BlackTea.getNAME() + "\n2. " + FruitTea.getNAME()
                 + "\n3. " + GreenTea.getNAME() + "\n4. " + MintTea.getNAME());
     }
 }
