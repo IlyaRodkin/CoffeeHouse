@@ -1,19 +1,40 @@
 package cake;
 
+import main.Price;
+
 public class Caramel extends MainCake {
 
-    private static String NAME = "Caramel cake";
-    private static String DESCRIPTION = "Just a cake with caramel";
+    private static String name = "Caramel cake";
+    private static String description = "Just a cake with caramel";
+    private static Integer calories = 401;
+    private static Integer weight = 120;
+    private static Double price;
 
-    public Caramel(Double price, Integer calories, Integer weight) {
-        super(price, calories, weight);
+    public String getName() {
+        return name;
     }
 
-    public static String getNAME() {
-        return NAME;
+    public String getDescription() {
+        return description;
     }
 
-    public static String getDESCRIPTION() {
-        return DESCRIPTION;
+    public Integer getCalories() {
+        return calories;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public Caramel(Double price) {
+
+    }
+
+    public Caramel() {
+        this.price = Price.getPriceCaramel();
     }
 }

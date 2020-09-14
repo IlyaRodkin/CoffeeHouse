@@ -1,19 +1,46 @@
 package coffee;
 
-public class Raff extends MainCoffee{
+public class Raff extends MainCoffee implements MainCoffeeInterface {
 
-    private static String NAME = "Raff";
-    private static String DESCRIPTION = "is a coffee with cream and a little foam";
+    private static String name = "Raff    ";
+    private static String description = "is a coffee with cream and a little foam";
 
-    public Raff(Double price, Integer sugar, Integer syrup, Integer grainType) {
-        super(price, sugar, syrup, grainType);
+    private static Boolean sugar = false;
+    private static String syrup = "No syrup";
+    private static Double price;
+
+    public void setSugar(Boolean sugar) {
+        Raff.sugar = sugar;
     }
 
-    public static String getNAME() {
-        return NAME;
+    public void setSyrup(String syrup) {
+        Raff.syrup = syrup;
     }
 
-    public static String getDESCRIPTION() {
-        return DESCRIPTION;
+    public  String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getSugar() {
+        if(sugar) return "yes";
+        else return "no";
+    }
+
+    public String getSyrup() {
+        return syrup;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public Raff(Double price) {
+        this.price = price;
+    }
+    public Raff() {
     }
 }

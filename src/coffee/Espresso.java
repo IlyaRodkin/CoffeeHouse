@@ -1,23 +1,47 @@
 package coffee;
 
-import coffee.MainCoffee;
+public class Espresso extends MainCoffee implements MainCoffeeInterface {
 
-public class Espresso extends MainCoffee {
+    public static String name = "Espresso";
+    private static String description = "Is a coffee-making method of Italian origin, in which a small amount of nearly boiling water\nis forced under pressure (expressed) through finely-ground coffee beans";
 
-    private static String NAME = "Espresso";
-    private static String DESCRIPTION = "Is a coffee-making method of Italian origin, in which a small amount of nearly boiling water\nis forced under pressure (expressed) through finely-ground coffee beans";
+    private static Boolean sugar = false;
+    private static String syrup = "No syrup";
+    private static Double price;
 
-    public Espresso(Double price, Integer sugar,
-                    Integer syrup, Integer grainType) {
-    super(price, sugar, syrup, grainType);
+    public void setSugar(Boolean sugar) {
+        Espresso.sugar = sugar;
     }
 
-    public static String getNAME() {
-        return NAME;
+    public void setSyrup(String syrup) {
+        Espresso.syrup = syrup;
     }
 
-    public static String getDESCRIPTION() {
-        return DESCRIPTION;
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getSugar() {
+        if(sugar) return "yes";
+        else return "no";
+    }
+
+    public String getSyrup() {
+        return syrup;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public Espresso(Double price) {
+        this.price = price;
+    }
+    public Espresso() {
     }
 
 }

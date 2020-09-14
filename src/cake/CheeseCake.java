@@ -1,19 +1,37 @@
 package cake;
 
-public class CheeseCake extends MainCake{
+import main.Price;
 
-    private static String NAME = "Cheesecake";
-    private static String DESCRIPTION = "Sweet dessert consisting of one or more layers";
+public class CheeseCake extends MainCake {
 
-    public CheeseCake(Double price, Integer calories, Integer weight) {
-        super(price, calories, weight);
+    private String name = "Cheesecake\t";
+    private String description = "Sweet dessert consisting of one or more layers";
+    private Integer calories = 321;
+    private Integer weight = 100;
+    private Double price;
+
+    public String getName() {
+        return name;
     }
 
-    public static String getNAME() {
-        return NAME;
+    public String getDescription() {
+        return description;
     }
 
-    public static String getDESCRIPTION() {
-        return DESCRIPTION;
+    public Integer getCalories() {
+        return calories;
     }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public CheeseCake() {
+        this.price = Price.getPriceCheeseCake();
+    }
+
 }

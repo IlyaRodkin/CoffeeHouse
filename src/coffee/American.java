@@ -1,19 +1,46 @@
 package coffee;
 
-public class American extends MainCoffee{
+public class American extends MainCoffee implements MainCoffeeInterface {
 
-    private static String NAME = "American";
-    private static String DESCRIPTION = "Is a type of coffee drink prepared by diluting an espresso with hot water";
+    private static String name = "American";
+    private static String description = "Is a type of coffee drink prepared by diluting an espresso with hot water";
+    private static Boolean sugar = false;
+    private static String syrup = "No syrup";
+    private static Double price;
 
-    public American(Double price, Integer sugar, Integer syrup, Integer grainType) {
-        super(price, sugar, syrup, grainType);
+    public void setSugar(Boolean sugar) {
+        American.sugar = sugar;
     }
 
-    public static String getNAME() {
-        return NAME;
+    public void setSyrup(String syrup) {
+        American.syrup = syrup;
     }
 
-    public static String getDESCRIPTION() {
-        return DESCRIPTION;
+    public  String getName() {
+        return name;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getSugar() {
+        if(sugar) return "yes";
+        else return "no";
+    }
+
+    public String getSyrup() {
+        return syrup;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public American(Double price) {
+        this.price = price;
+    }
+    public American() {
+    }
+
 }

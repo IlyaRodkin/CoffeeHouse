@@ -1,19 +1,36 @@
 package cake;
 
-public class Chocolate extends MainCake{
+import main.Price;
 
-    private static String NAME = "Chocolate cake";
-    private static String DESCRIPTION = "Cake with chocolate";
+public class Chocolate extends MainCake {
 
-    public Chocolate(Double price, Integer calories, Integer weight) {
-        super(price, calories, weight);
+    private String name = "Chocolate cake";
+    private String description = "Cake with chocolate";
+    private Integer calories = 482;
+    private Integer weight = 130;
+    private Double price;
+
+    public String getName() {
+        return name;
     }
 
-    public static String getNAME() {
-        return NAME;
+    public String getDescription() {
+        return description;
     }
 
-    public static String getDESCRIPTION() {
-        return DESCRIPTION;
+    public Integer getCalories() {
+        return calories;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public Chocolate() {
+        this.price = Price.getPriceChocolate();
     }
 }
