@@ -1,20 +1,21 @@
 package coffee;
 
+import main.Price;
+
 public class Espresso extends MainCoffee implements MainCoffeeInterface {
 
-    public static String name = "Espresso";
-    private static String description = "Is a coffee-making method of Italian origin, in which a small amount of nearly boiling water\nis forced under pressure (expressed) through finely-ground coffee beans";
-
-    private static Boolean sugar = false;
-    private static String syrup = "No syrup";
-    private static Double price;
+    private static final String name = "Espresso";
+    private static final String description = "Is a coffee-making method of Italian origin, in which a small amount of nearly boiling water\nis forced under pressure (expressed) through finely-ground coffee beans";
+    private  Boolean sugar = false;
+    private  String syrup = "No syrup";
+    private  Double price;
 
     public void setSugar(Boolean sugar) {
-        Espresso.sugar = sugar;
+        this.sugar = sugar;
     }
 
     public void setSyrup(String syrup) {
-        Espresso.syrup = syrup;
+        this.syrup = syrup;
     }
 
     public String getName() {
@@ -26,7 +27,7 @@ public class Espresso extends MainCoffee implements MainCoffeeInterface {
     }
 
     public String getSugar() {
-        if(sugar) return "yes";
+        if (sugar) return "yes";
         else return "no";
     }
 
@@ -38,10 +39,8 @@ public class Espresso extends MainCoffee implements MainCoffeeInterface {
         return price;
     }
 
-    public Espresso(Double price) {
-        this.price = price;
-    }
     public Espresso() {
+        this.price = Price.getPriceEspresso();
     }
 
 }

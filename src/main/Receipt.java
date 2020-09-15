@@ -44,7 +44,7 @@ public class Receipt {
         for (int i = 0; i < receiptOfTea.size(); i++) {
 
             System.out.println(receiptOfTea.get(i).getName() + "\t" + receiptOfTea.get(i).getSugar()
-                    + "\t\t2" + receiptOfTea.get(i).getIce() + "\t\t" + receiptOfTea.get(i).getPrice() + "$");
+                    + "\t\t" + receiptOfTea.get(i).getIce() + "\t\t" + receiptOfTea.get(i).getPrice() + "$");
 
             sumPrice += receiptOfTea.get(i).getPrice();
         }

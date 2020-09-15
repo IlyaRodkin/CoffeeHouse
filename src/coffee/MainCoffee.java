@@ -1,9 +1,7 @@
 package coffee;
 
-import cake.MainCake;
 import main.CafeLogic;
 import main.Price;
-import main.Receipt;
 
 import java.util.Scanner;
 
@@ -21,20 +19,24 @@ public abstract class MainCoffee implements MainCoffeeInterface {
         while (num == 0) num = CafeLogic.consoleIn();
         switch (num) {
             case 1:
-                System.out.printf(new Espresso().getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceEspresso());
-                buyCoffee(new Espresso(Price.getPriceEspresso()));
+                Espresso espresso = new Espresso();
+                System.out.printf(espresso.getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceEspresso());
+                buyCoffee(espresso);
                 break;
             case 2:
-                System.out.printf(new American().getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceAmerican());
-                buyCoffee(new American(Price.getPriceAmerican()));
+                American american = new American();
+                System.out.printf(american.getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceAmerican());
+                buyCoffee(american);
                 break;
             case 3:
-                System.out.printf(new Latte().getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceLatte());
-                buyCoffee(new Latte(Price.getPriceEspresso()));
+                Latte latte = new Latte();
+                System.out.printf(latte.getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceLatte());
+                buyCoffee(latte);
                 break;
             case 4:
-                System.out.printf(new Raff().getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceRaff());
-                buyCoffee(new Raff(Price.getPriceEspresso()));
+                Raff raff = new Raff();
+                System.out.printf(raff.getName() + "\ncost is %s$" + GET_MORE_INFO, Price.getPriceRaff());
+                buyCoffee(raff);
                 break;
             case 5:
                 CafeLogic.menuCafe();

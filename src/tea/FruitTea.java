@@ -1,13 +1,14 @@
 package tea;
 
+import main.Price;
+
 public class FruitTea extends MainTea implements MainTeaInterface {
 
-    private static String name = "Fruit tea";
-    private static String description = "Fruit teas are black teas flavoured with a natural essence of fruit";
-
-    private static Boolean sugar = false;
-    private static Boolean ice = false;
-    private static Double price;
+    private static final String name = "Fruit tea";
+    private static final String description = "Fruit teas are black teas flavoured with a natural essence of fruit";
+    private Boolean sugar = false;
+    private Boolean ice = false;
+    private Double price;
 
 
     public String getName() {
@@ -33,17 +34,14 @@ public class FruitTea extends MainTea implements MainTeaInterface {
     }
 
     public void setSugar(Boolean sugar) {
-        FruitTea.sugar = sugar;
+        this.sugar = sugar;
     }
 
     public void setIce(Boolean ice) {
-        FruitTea.ice = ice;
-    }
-
-    public FruitTea(Double price) {
-        FruitTea.price = price;
+        this.ice = ice;
     }
 
     public FruitTea() {
+        this.price = Price.getPriceFruitTea();
     }
 }

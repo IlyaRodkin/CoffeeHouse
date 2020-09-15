@@ -1,22 +1,24 @@
 package coffee;
 
+import main.Price;
+
 public class American extends MainCoffee implements MainCoffeeInterface {
 
-    private static String name = "American";
-    private static String description = "Is a type of coffee drink prepared by diluting an espresso with hot water";
-    private static Boolean sugar = false;
-    private static String syrup = "No syrup";
-    private static Double price;
+    private static final String name = "American";
+    private static final String description = "Is a type of coffee drink prepared by diluting an espresso with hot water";
+    private  Boolean sugar = false;
+    private  String syrup = "No syrup";
+    private  Double price;
 
     public void setSugar(Boolean sugar) {
-        American.sugar = sugar;
+        this.sugar = sugar;
     }
 
     public void setSyrup(String syrup) {
-        American.syrup = syrup;
+        this.syrup = syrup;
     }
 
-    public  String getName() {
+    public String getName() {
         return name;
     }
 
@@ -25,7 +27,7 @@ public class American extends MainCoffee implements MainCoffeeInterface {
     }
 
     public String getSugar() {
-        if(sugar) return "yes";
+        if (sugar) return "yes";
         else return "no";
     }
 
@@ -36,11 +38,8 @@ public class American extends MainCoffee implements MainCoffeeInterface {
     public Double getPrice() {
         return price;
     }
-
-    public American(Double price) {
-        this.price = price;
-    }
     public American() {
+        this.price = Price.getPriceAmerican();
     }
 
 }

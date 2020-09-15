@@ -1,12 +1,13 @@
 package tea;
 
-public class MintTea extends MainTea implements MainTeaInterface {
-    private static String name = "Mint tea";
-    private static String description = "Mint tea is made from peppermint leaves";
+import main.Price;
 
-    private static Boolean sugar = false;
-    private static Boolean ice = false;
-    private static Double price;
+public class MintTea extends MainTea implements MainTeaInterface {
+    private static final String name = "Mint tea";
+    private static final String description = "Mint tea is made from peppermint leaves";
+    private Boolean sugar = false;
+    private Boolean ice = false;
+    private Double price;
 
     public String getName() {
         return name;
@@ -31,17 +32,14 @@ public class MintTea extends MainTea implements MainTeaInterface {
     }
 
     public void setSugar(Boolean sugar) {
-        MintTea.sugar = sugar;
+        this.sugar = sugar;
     }
 
     public void setIce(Boolean ice) {
-        MintTea.ice = ice;
-    }
-
-    public MintTea(Double price) {
-        MintTea.price = price;
+        this.ice = ice;
     }
 
     public MintTea() {
+        this.price = Price.getPriceMintTea();
     }
 }

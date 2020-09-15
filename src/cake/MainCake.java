@@ -23,7 +23,7 @@ public abstract class MainCake implements MainCakeInterface {
         switch (num) {
             case 1:
                 Chocolate chocolate = new Chocolate();
-                System.out.printf(new Chocolate().getName() + "\ncost is %s$" + "\nWeight is %sgr\n" +
+                System.out.printf(chocolate.getName() + "\ncost is %s$" + "\nWeight is %sgr\n" +
                         chocolate.getCalories() + "kcal" + GET_MORE_INFO, Price.getPriceChocolate(), chocolate.getWeight());
                 buyCake(chocolate);
                 break;

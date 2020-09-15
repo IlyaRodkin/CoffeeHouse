@@ -4,22 +4,21 @@ import main.Price;
 
 public class Latte extends MainCoffee implements MainCoffeeInterface {
 
-    private static String name = "Latte   ";
-    private static String description = "Is a coffee drink made with espresso and steamed milk";
-
-    private static Boolean sugar = false;
-    private static String syrup = "No syrup";
-    private static Double price;
+    private static final String name = "Latte   ";
+    private static final String description = "Is a coffee drink made with espresso and steamed milk";
+    private Boolean sugar = false;
+    private String syrup = "No syrup";
+    private Double price;
 
     public void setSugar(Boolean sugar) {
-        Latte.sugar = sugar;
+        this.sugar = sugar;
     }
 
     public void setSyrup(String syrup) {
-        Latte.syrup = syrup;
+        this.syrup = syrup;
     }
 
-    public  String getName() {
+    public String getName() {
         return name;
     }
 
@@ -28,7 +27,7 @@ public class Latte extends MainCoffee implements MainCoffeeInterface {
     }
 
     public String getSugar() {
-        if(sugar) return "yes";
+        if (sugar) return "yes";
         else return "no";
     }
 
@@ -40,10 +39,9 @@ public class Latte extends MainCoffee implements MainCoffeeInterface {
         return price;
     }
 
-    public Latte(Double price) {
-        this.price = price;
-    }
+
     public Latte() {
+        this.price = Price.getPriceLatte();
     }
 
 

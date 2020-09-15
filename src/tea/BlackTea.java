@@ -1,12 +1,14 @@
 package tea;
 
-public class BlackTea extends MainTea implements MainTeaInterface {
-    private static String name = "Black tea";
-    private static String description = "Black tea is a true tea that comes from the Camellia sinensis plant";
+import main.Price;
 
-    private static Boolean sugar = false;
-    private static Boolean ice = false;
-    private static Double price;
+public class BlackTea extends MainTea implements MainTeaInterface {
+
+    private static final String name = "Black tea";
+    private static final String description = "Black tea is a true tea that comes from the Camellia sinensis plant";
+    private Boolean sugar = false;
+    private Boolean ice = false;
+    private Double price;
 
 
     public String getName() {
@@ -32,17 +34,14 @@ public class BlackTea extends MainTea implements MainTeaInterface {
     }
 
     public void setSugar(Boolean sugar) {
-        BlackTea.sugar = sugar;
+        this.sugar = sugar;
     }
 
     public void setIce(Boolean ice) {
-        BlackTea.ice = ice;
-    }
-
-    public BlackTea(Double price) {
-        BlackTea.price = price;
+        this.ice = ice;
     }
 
     public BlackTea() {
+        this.price = Price.getPriceBlackTea();
     }
 }
