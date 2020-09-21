@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public abstract class MainCoffee implements MainCoffeeInterface {
 
-    public static final String GET_MORE_INFO = "\n1. get description\n2. Buy\n3. add syrup\n4. add sugar\n5. choose another one\n\n";
+    public static final String GET_MORE_INFO = "\n1. get description\n2. Buy\n3. add sugar\n4. add syrup\n5. choose another one\n\n";
 
     public static void getSetOfCoffee() {
         System.out.println("Today we have, so what do you want?\n1. " + new Espresso().getName() + "\n2. " + new American().getName()
