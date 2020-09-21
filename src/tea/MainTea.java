@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public abstract class MainTea implements MainTeaInterface {
 
-    public static final String GET_MORE_INFO = "\n1. get description\n2. Buy\n3. add ice\n4. add sugar\n5. choose another one\n\n";
+    public static final String GET_MORE_INFO = "\n1. get description\n2. Buy\n3. add sugar\n4. add ice\n5. choose another one\n\n";
 
     public static void getSetOfTea() {
         System.out.println("Today we have, so what do you want?\n1. " + new BlackTea().getName() + "\n2. " + new FruitTea().getName()
